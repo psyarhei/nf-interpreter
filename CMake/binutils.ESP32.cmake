@@ -582,6 +582,10 @@ macro(nf_add_idf_as_library)
         nf_install_idf_component_from_registry(esp_jpeg 64a7c4fb-8c0e-4fdb-89b7-37759ff6ca27)
     endif()
 
+    if(API_nanoFramework.EspMatter)
+        nf_install_idf_component_from_registry(esp_matter 253b36aa-db2a-4e5f-8d1f-887d70b9e6b7)
+    endif()
+
     if(${TARGET_SERIES_SHORT} STREQUAL "esp32p4")
         # v1.6.3
         nf_install_idf_component_from_registry(esp_wifi_remote 3c98b2c9-11fb-4477-b80a-1aaa3536b46d)
@@ -726,6 +730,11 @@ macro(nf_add_idf_as_library)
         file(APPEND "${SDKCONFIG_DEFAULTS_TEMP_FILE}"
             "\nCONFIG_SCCB_HARDWARE_I2C_DRIVER_NEW=n\n"
             "CONFIG_SCCB_HARDWARE_I2C_DRIVER_LEGACY=y\n")
+    endif()
+
+    if(API_nanoFramework.EspMatter)
+        list(APPEND IDF_COMPONENTS_TO_ADD esp_matter)
+        list(APPEND IDF_LIBRARIES_TO_ADD idf::esp_matter)
     endif()
 
     # handle specifics for ESP32S2 series

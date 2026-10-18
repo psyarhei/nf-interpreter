@@ -209,6 +209,19 @@
             }
         },
         {
+            "name": "ESP32_C6_MATTER_OVER_THREAD",
+            "inherits": [
+                "riscv-esp32c6-preset",
+                "user-tools-repos",
+                "user-prefs"
+            ],
+            "hidden": false,
+            "cacheVariables": {
+                "TARGET_NAME": "${presetName}",
+                "NF_TARGET_DEFCONFIG": "targets/ESP32/defconfig/ESP32_C6_MATTER_OVER_THREAD_defconfig"
+            }
+        },
+        {
             "name": "ESP32_C61",
             "inherits": [
                 "riscv-esp32c61-preset",
@@ -637,6 +650,12 @@
             "name": "ESP32_C6_THREAD",
             "displayName": "ESP32_C6_THREAD",
             "configurePreset": "ESP32_C6_THREAD"
+        },
+        {
+            "inherits": "base-user",
+            "name": "ESP32_C6_MATTER_OVER_THREAD",
+            "displayName": "ESP32_C6_MATTER_OVER_THREAD",
+            "configurePreset": "ESP32_C6_MATTER_OVER_THREAD"
         },
         {
             "inherits": "base-user",
