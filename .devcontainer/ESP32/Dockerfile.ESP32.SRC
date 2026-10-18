@@ -75,11 +75,6 @@ RUN git clone --branch R0.16 https://github.com/abbrev/fatfs.git --depth 1 ./sou
 # >>> IDF MIGRATION: update the branch tag to the new IDF version <<<
 RUN git clone --branch v5.5.5 https://github.com/espressif/esp-idf --depth 1 --recursive ./sources/esp-idf
 
-# Clone ESP-MATTER
-# >>> IDF MIGRATION: update the branch tag to the new ESP-MATTER version <<<
-RUN git clone --branch release/v1.6 https://github.com/espressif/esp-matter --depth 1 ./sources/esp-matter
-RUN git -C ./sources/esp-matter submodule update --init --depth 1 connectedhomeip/connectedhomeip
-
 # Installing python dependencies for the container
 RUN pip3 install --no-cache-dir pyserial "kconfiglib>=14.1.0"
 
@@ -94,8 +89,6 @@ ENV IDF_PATH=/sources/esp-idf
 # (it runs as root during the image build, so $HOME is /root). ESP-IDF defaults
 # this to $HOME/.espressif, which would otherwise resolve to /home/vscode for
 # the non-root user and miss the toolchain/venv installed below.
-# Install ESP-MATTER
-ENV ESP_MATTER_PATH=/sources/esp-matter
 ENV IDF_TOOLS_PATH=/root/.espressif
 # >>> IDF MIGRATION: ESP_PATCH_VER is the GCC toolchain version installed by IDF.
 #     After install.sh completes, check ~/.espressif/tools/xtensa-esp-elf/ for
