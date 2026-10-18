@@ -583,7 +583,12 @@ macro(nf_add_idf_as_library)
     endif()
 
     if(API_nanoFramework.EspMatter)
+        # 1.6.0~1
         nf_install_idf_component_from_registry(esp_matter 253b36aa-db2a-4e5f-8d1f-887d70b9e6b7)
+        # 1.14.0
+        nf_install_idf_component_from_registry(mdns b4453c23-cca7-4de1-b6c8-fdab589a189c)
+        # 2.9.3
+        nf_install_idf_component_from_registry(esp_secure_cert_mgr 99c31e7b-9e81-4019-80af-992a3fdfc7c0)
     endif()
 
     if(${TARGET_SERIES_SHORT} STREQUAL "esp32p4")
