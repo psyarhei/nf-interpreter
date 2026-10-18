@@ -1,1 +1,1 @@
-FROM ghcr.io/psyarhei/nanoframework-esp32-matter:latest
+FROM ghcr.io/psyarhei/nanoframework-esp32-matter:v1.0
