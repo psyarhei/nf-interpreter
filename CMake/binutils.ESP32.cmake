@@ -583,8 +583,8 @@ macro(nf_add_idf_as_library)
     endif()
 
     if(API_nanoFramework.EspMatter)
-        # 1.6.0~1
-        nf_install_idf_component_from_registry(esp_matter 253b36aa-db2a-4e5f-8d1f-887d70b9e6b7)
+        # psyarhei/esp_matter 1.6.0~2
+        nf_install_idf_component_from_registry(esp_matter 801a1505-2f4b-47e1-a614-ae87aa95b92c)
         # 1.14.0
         nf_install_idf_component_from_registry(mdns b4453c23-cca7-4de1-b6c8-fdab589a189c)
         # 2.9.3
