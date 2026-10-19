@@ -3,15 +3,26 @@
 # See LICENSE file in the project root for full license information.
 #
 
-set(BASE_PATH_FOR_THIS_MODULE ${BASE_PATH_FOR_CLASS_LIBRARIES_MODULES}/nanoFramework.EspMatter)
+message(STATUS "psyarhei CMAKE_BINARY_DIR ${CMAKE_BINARY_DIR}/esp-idf/esp_matter/access")
+message(STATUS "psyarhei BASE_PATH_FOR_THIS_MODULE = ${BASE_PATH_FOR_THIS_MODULE}")
+message(STATUS "psyarhei BASE_PATH_FOR_CLASS_LIBRARIES_MODULES = ${BASE_PATH_FOR_CLASS_LIBRARIES_MODULES}")
+message(STATUS "psyarhei CMAKE_SOURCE_DIR = ${CMAKE_SOURCE_DIR}")
+message(STATUS "psyarhei IDF_PATH_CMAKED = ${IDF_PATH_CMAKED}")
+message(STATUS "psyarhei TARGET_BASE_LOCATION = ${TARGET_BASE_LOCATION}")
 
+set(BASE_PATH_FOR_THIS_MODULE ${BASE_PATH_FOR_CLASS_LIBRARIES_MODULES}/nanoFramework.EspMatter)
 list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${CMAKE_SOURCE_DIR}/src/CLR/Core)
 list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${CMAKE_SOURCE_DIR}/src/CLR/Include)
 list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${CMAKE_SOURCE_DIR}/src/HAL/Include)
 list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${CMAKE_SOURCE_DIR}/src/PAL/Include)
 list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${IDF_PATH_CMAKED}/components/esp_matter/components/esp_matter)
 list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${IDF_PATH_CMAKED}/components/esp_matter/connectedhomeip/connectedhomeip/src)
+list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${IDF_PATH_CMAKED}/components/esp_matter/connectedhomeip/connectedhomeip/src/include)
 list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${IDF_PATH_CMAKED}/components/esp_matter/connectedhomeip/connectedhomeip/third_party/nlio/repo/include)
+list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${IDF_PATH_CMAKED}/components/esp_matter/connectedhomeip/connectedhomeip/zzz_generated/app-common)
+
+list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${CMAKE_BINARY_DIR}/esp-idf/esp_matter)
+
 list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${BASE_PATH_FOR_THIS_MODULE})
 
 set(nanoFramework.EspMatter_SRCS
