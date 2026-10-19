@@ -10,9 +10,9 @@ list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${CMAKE_SOURCE_DIR}/src/CLR/Inc
 list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${CMAKE_SOURCE_DIR}/src/HAL/Include)
 list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${CMAKE_SOURCE_DIR}/src/PAL/Include)
 list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${IDF_PATH_CMAKED}/components/esp_matter/components/esp_matter)
-list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${IDF_PATH_CMAKED}/components/esp_matter/connectedhomeip/connectedhomeip/src/app)
+list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${IDF_PATH_CMAKED}/components/esp_matter/connectedhomeip/connectedhomeip/src)
+list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${IDF_PATH_CMAKED}/components/esp_matter/connectedhomeip/connectedhomeip/third_party/nlio/repo/include)
 list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${BASE_PATH_FOR_THIS_MODULE})
-# list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${TARGET_BASE_LOCATION}/nanoFramework.EspMatter)
 
 set(nanoFramework.EspMatter_SRCS
     nanoFramework_EspMatter.cpp
@@ -26,7 +26,6 @@ foreach(SRC_FILE ${nanoFramework.EspMatter_SRCS})
         PATHS
             ${BASE_PATH_FOR_THIS_MODULE}
             ${TARGET_BASE_LOCATION}
-            # ${TARGET_BASE_LOCATION}/nanoFramework.EspMatter
         CMAKE_FIND_ROOT_PATH_BOTH
     )
 
