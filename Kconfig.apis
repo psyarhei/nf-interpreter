@@ -107,6 +107,11 @@ config API_NANOFRAMEWORK_ESPNOW
     depends on RTOS_ESP32
     default n
 
+config API_NANOFRAMEWORK_ESPMATTER
+    bool "nanoFramework.EspMatter"
+    depends on RTOS_ESP32
+    default n
+
 config API_NANOFRAMEWORK_NETWORKING_THREAD
     bool "nanoFramework.Networking.Thread"
     default n
