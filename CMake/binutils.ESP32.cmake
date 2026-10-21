@@ -587,6 +587,10 @@ macro(nf_add_idf_as_library)
         nf_install_idf_component_from_registry(mdns 9cbbeaf5-0e8d-47e4-81b1-f4f5baba3fc0)
         nf_install_idf_component_from_registry(esp_secure_cert_mgr e496cd0d-e939-44f5-a361-a63c846198a1)
         nf_install_idf_component_from_registry(espressif__cjson 0f95b98f-f7cb-4769-a16a-0dd731c0a9f1)
+
+        if(EXISTS ${IDF_PATH_CMAKED}/components/cjson)
+            file(RENAME ${IDF_PATH_CMAKED}/components/cjson ${IDF_PATH_CMAKED}/components/espressif__cjson)
+        endif()
     endif()
 
     if(${TARGET_SERIES_SHORT} STREQUAL "esp32p4")
