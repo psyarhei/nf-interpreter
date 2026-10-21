@@ -11,6 +11,10 @@ list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${PROJECT_SOURCE_DIR}/src/CLR/C
 list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${PROJECT_SOURCE_DIR}/src/CLR/Include)
 list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${PROJECT_SOURCE_DIR}/src/HAL/Include)
 list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${PROJECT_SOURCE_DIR}/src/PAL/Include)
+list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${IDF_PATH_CMAKED}/components/esp_matter/components/esp_matter)
+list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${IDF_PATH_CMAKED}/components/esp_matter/connectedhomeip/connectedhomeip/src)
+list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${IDF_PATH_CMAKED}/components/esp_matter/connectedhomeip/connectedhomeip/src)
+list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${IDF_PATH_CMAKED}/components/esp_matter/connectedhomeip/connectedhomeip/third_party/nlio/repo/include)
 list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${BASE_PATH_FOR_THIS_MODULE})
 
 # source files

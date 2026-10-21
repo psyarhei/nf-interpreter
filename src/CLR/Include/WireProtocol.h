@@ -17,8 +17,8 @@
 #include <target_common.h>
 #endif
 
-#ifndef min
-#define min(a,b)  (((a) < (b)) ? (a) : (b))
+#ifndef MiN
+#define MiN(a,b)  (((a) < (b)) ? (a) : (b))
 #endif
 
 #ifndef ARRAYSIZE
