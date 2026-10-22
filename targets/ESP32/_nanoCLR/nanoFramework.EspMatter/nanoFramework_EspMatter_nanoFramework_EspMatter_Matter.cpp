@@ -4,7 +4,7 @@
 
 using namespace nanoFramework_EspMatter::nanoFramework_EspMatter;
 
-bool Matter::EspMatter_IsStarted(  HRESULT &hr )
+bool Matter::EspMatter_IsStarted(HRESULT &hr)
 {
     (void)hr;
 
