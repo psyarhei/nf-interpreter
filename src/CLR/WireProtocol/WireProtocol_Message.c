@@ -77,7 +77,7 @@ bool SyncToMessageStart()
             break;
         }
 
-        size_t lenCmp = min(len, sizeof(((WP_Packet *)0)->m_signature));
+        size_t lenCmp = MiN(len, sizeof(((WP_Packet *)0)->m_signature));
 
         if (IsMarkerMatched(&_inboundMessage.m_header, MARKER_DEBUGGER_V1, lenCmp) ||
             IsMarkerMatched(&_inboundMessage.m_header, MARKER_PACKET_V1, lenCmp))

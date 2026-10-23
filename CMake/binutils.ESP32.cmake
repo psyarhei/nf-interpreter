@@ -582,6 +582,17 @@ macro(nf_add_idf_as_library)
         nf_install_idf_component_from_registry(esp_jpeg 64a7c4fb-8c0e-4fdb-89b7-37759ff6ca27)
     endif()
 
+    if(API_nanoFramework.EspMatter)
+        nf_install_idf_component_from_registry(esp_matter d2eac211-cb4a-4cf5-a148-2e9d87bbb68b)
+        nf_install_idf_component_from_registry(mdns 9cbbeaf5-0e8d-47e4-81b1-f4f5baba3fc0)
+        nf_install_idf_component_from_registry(esp_secure_cert_mgr e496cd0d-e939-44f5-a361-a63c846198a1)
+        nf_install_idf_component_from_registry(espressif__cjson 0f95b98f-f7cb-4769-a16a-0dd731c0a9f1)
+
+        if(EXISTS ${IDF_PATH_CMAKED}/components/cjson)
+            file(RENAME ${IDF_PATH_CMAKED}/components/cjson ${IDF_PATH_CMAKED}/components/espressif__cjson)
+        endif()
+    endif()
+
     if(${TARGET_SERIES_SHORT} STREQUAL "esp32p4")
         # v1.6.3
         nf_install_idf_component_from_registry(esp_wifi_remote 3c98b2c9-11fb-4477-b80a-1aaa3536b46d)
@@ -714,6 +725,11 @@ macro(nf_add_idf_as_library)
     if(HAL_USE_THREAD_OPTION)
         list(APPEND IDF_COMPONENTS_TO_ADD openthread)
         list(APPEND IDF_LIBRARIES_TO_ADD idf::openthread)
+    endif()
+
+    if(API_nanoFramework.EspMatter)
+        list(APPEND IDF_COMPONENTS_TO_ADD esp_matter)
+        list(APPEND IDF_LIBRARIES_TO_ADD idf::esp_matter)
     endif()
 
     if(API_nanoFramework.Esp32.Camera)

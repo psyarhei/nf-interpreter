@@ -1,0 +1,16 @@
+#include "nanoFramework_EspMatter.h"
+#include "nanoFramework_EspMatter_nanoFramework_EspMatter_Matter.h"
+
+using namespace nanoFramework_EspMatter::nanoFramework_EspMatter;
+
+HRESULT Library_nanoFramework_EspMatter_nanoFramework_EspMatter_Matter::EspMatter_IsStarted___STATIC__BOOLEAN( CLR_RT_StackFrame& stack )
+{
+    NANOCLR_HEADER(); hr = S_OK;
+    {
+
+        bool retValue = Matter::EspMatter_IsStarted(  hr );
+        NANOCLR_CHECK_HRESULT( hr );
+        SetResult_bool( stack, retValue );
+    }
+    NANOCLR_NOCLEANUP();
+}
