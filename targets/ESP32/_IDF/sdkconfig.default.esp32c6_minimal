@@ -1,16 +1,17 @@
 # This file was generated using idf.py save-defconfig. It can be edited manually.
 # Espressif IoT Development Framework (ESP-IDF)  Project Minimal Configuration
 #
-CONFIG_IDF_TARGET="esp32c6"
 
 CONFIG_PARTITION_TABLE_CUSTOM=y
 CONFIG_PARTITION_TABLE_CUSTOM_FILENAME="targets/ESP32/_IDF/${TARGET_SERIES_SHORT}/partitions_nanoclr_4mb.csv"
 
-CONFIG_UART_ISR_IN_IRAM=y
-
+# required
 CONFIG_I2S_SUPPRESS_DEPRECATE_WARN=y
 
 CONFIG_LITTLEFS_MAX_PARTITIONS=1
 CONFIG_LITTLEFS_OBJ_NAME_LEN=256
 CONFIG_LITTLEFS_OPEN_DIR=y
 CONFIG_LITTLEFS_FCNTL_GET_PATH=y
+
+
+CONFIG_ESPTOOLPY_FLASHSIZE_4MB=y
