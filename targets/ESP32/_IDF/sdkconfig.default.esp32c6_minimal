@@ -1,0 +1,16 @@
+# This file was generated using idf.py save-defconfig. It can be edited manually.
+# Espressif IoT Development Framework (ESP-IDF)  Project Minimal Configuration
+#
+
+# unable to set custom partition filename without this setting
+CONFIG_PARTITION_TABLE_CUSTOM=y
+CONFIG_PARTITION_TABLE_CUSTOM_FILENAME="targets/ESP32/_IDF/${TARGET_SERIES_SHORT}/partitions_nanoclr_4mb.csv"
+
+# required
+CONFIG_ESPTOOLPY_FLASHSIZE_4MB=y
+
+# required
+CONFIG_I2S_SUPPRESS_DEPRECATE_WARN=y
+
+# without this debug does not work
+CONFIG_LITTLEFS_MAX_PARTITIONS=1
