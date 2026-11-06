@@ -582,6 +582,25 @@ macro(nf_add_idf_as_library)
         nf_install_idf_component_from_registry(esp_jpeg 64a7c4fb-8c0e-4fdb-89b7-37759ff6ca27)
     endif()
 
+    if(API_nanoFramework.EspMatter)
+        # https://components.espressif.com/components/psyarhei/esp_matter/versions/1.6.0
+        nf_install_idf_component_from_registry(esp_matter 0d50126c-fe94-49b5-98ef-77ebe4ca4372)
+        # https://components.espressif.com/components/espressif/mdns/versions/1.15.1
+        nf_install_idf_component_from_registry(mdns d8de3e6f-9d43-4431-85ec-111162ef19c2)
+        # https://components.espressif.com/components/espressif/esp_secure_cert_mgr/versions/2.9.3
+        nf_install_idf_component_from_registry(esp_secure_cert_mgr 99c31e7b-9e81-4019-80af-992a3fdfc7c0)
+        # https://components.espressif.com/components/espressif/cjson/versions/1.7.19~2
+        nf_install_idf_component_from_registry(espressif__cjson 6abd1ce4-76b5-434f-b3c2-e0d51f6734f3)
+
+        if(NOT EXISTS ${IDF_PATH_CMAKED}/components/espressif__cjson)
+            # copy contents of cjson folder to espressif__cjson folder as the IDF build expects it to be there
+            file(COPY ${IDF_PATH_CMAKED}/components/cjson/ DESTINATION ${IDF_PATH_CMAKED}/components/espressif__cjson)
+    
+            # remove cjson 
+            file(REMOVE_RECURSE ${IDF_PATH_CMAKED}/components/cjson)
+        endif()
+    endif()
+
     if(${TARGET_SERIES_SHORT} STREQUAL "esp32p4")
         # v1.6.3
         nf_install_idf_component_from_registry(esp_wifi_remote 3c98b2c9-11fb-4477-b80a-1aaa3536b46d)
@@ -726,6 +745,11 @@ macro(nf_add_idf_as_library)
         file(APPEND "${SDKCONFIG_DEFAULTS_TEMP_FILE}"
             "\nCONFIG_SCCB_HARDWARE_I2C_DRIVER_NEW=n\n"
             "CONFIG_SCCB_HARDWARE_I2C_DRIVER_LEGACY=y\n")
+    endif()
+
+    if(API_nanoFramework.EspMatter)
+        list(APPEND IDF_COMPONENTS_TO_ADD esp_matter)
+        list(APPEND IDF_LIBRARIES_TO_ADD idf::esp_matter)
     endif()
 
     # handle specifics for ESP32S2 series
@@ -996,7 +1020,11 @@ macro(nf_add_idf_as_library)
     )
 
     # add nano libraries to the link dependencies of IDF build
-    idf_build_set_property(__LINK_DEPENDS "NF_CoreCLR;NF_NativeAssemblies;NF_Debugger;WireProtocol;NF_Network" APPEND)
+    idf_build_set_property(__LINK_DEPENDS "NF_CoreCLR;NF_NativeAssemblies;NF_Debugger;WireProtocol" APPEND)
+
+    if(USE_NETWORKING_OPTION)
+        idf_build_set_property(__LINK_DEPENDS "NF_Network" APPEND)
+    endif()
 
     nf_setup_partition_tables_generator()
 
