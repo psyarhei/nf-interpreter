@@ -8,6 +8,7 @@ namespace nanoFramework_EspMatter
         struct Matter
         {
             static bool EspMatter_IsStarted(HRESULT &hr);
+            static void EspMatter_Start(HRESULT &hr);
         };
     }
 }

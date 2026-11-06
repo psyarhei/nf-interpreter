@@ -14,3 +14,14 @@ HRESULT Library_nanoFramework_EspMatter_nanoFramework_EspMatter_Matter::EspMatte
     }
     NANOCLR_NOCLEANUP();
 }
+
+HRESULT Library_nanoFramework_EspMatter_nanoFramework_EspMatter_Matter::EspMatter_Start___STATIC__VOID(CLR_RT_StackFrame& stack)
+{
+    NANOCLR_HEADER();
+    hr = S_OK;
+    {
+        Matter::EspMatter_Start(hr);
+        NANOCLR_CHECK_HRESULT(hr);
+    }
+    NANOCLR_NOCLEANUP();
+}

@@ -17,3 +17,7 @@ bool Matter::EspMatter_IsStarted(HRESULT &hr)
 
     return retValue;
 }
+
+void Matter::EspMatter_Start(HRESULT &hr)
+{
+}

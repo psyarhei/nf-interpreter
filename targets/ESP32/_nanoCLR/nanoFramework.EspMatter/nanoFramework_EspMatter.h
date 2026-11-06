@@ -8,7 +8,7 @@
 struct Library_nanoFramework_EspMatter_nanoFramework_EspMatter_Matter
 {
     NANOCLR_NATIVE_DECLARE(EspMatter_IsStarted___STATIC__BOOLEAN);
-
+    NANOCLR_NATIVE_DECLARE(EspMatter_Start___STATIC__VOID);
     //--//
 };
 
