@@ -2,6 +2,9 @@
 # Copyright (c) .NET Foundation and Contributors
 # See LICENSE file in the project root for full license information.
 #
+
+add_definitions(-DCHIP_HAVE_CONFIG_H)
+
 # native code directory
 set(BASE_PATH_FOR_THIS_MODULE ${BASE_PATH_FOR_CLASS_LIBRARIES_MODULES}/nanoFramework.EspMatter)
 
