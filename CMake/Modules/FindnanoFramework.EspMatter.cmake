@@ -58,6 +58,126 @@ list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${IDF_PATH_CMAKED}/components/e
 # [build] /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/transport/Session.h:29:10: fatal error: platform/LockTracker.h: No such file or directory
 list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${IDF_PATH_CMAKED}/components/esp_matter/connectedhomeip/connectedhomeip/src/include)
 
+# [build] In file included from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/platform/ESP32/ThreadStackManagerImpl.h:34,
+# [build]                  from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/include/platform/ThreadStackManager.h:249,
+# [build]                  from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/include/platform/internal/GenericConnectivityManagerImpl_Thread.h:29,
+# [build]                  from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/platform/ESP32/ConnectivityManagerImpl.h:40,
+# [build]                  from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/include/platform/ConnectivityManager.h:338,
+# [build]                  from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/platform/ESP32/ConfigurationManagerImpl.h:30,
+# [build]                  from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/include/platform/ConfigurationManager.h:233,
+# [build]                  from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/include/platform/CHIPDeviceLayer.h:27,
+# [build]                  from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/app/CASESessionManager.h:28,
+# [build]                  from /sources/esp-idf/components/esp_matter/components/esp_matter/esp_matter_core.h:17,
+# [build]                  from /workspaces/nf-interpreter/targets/ESP32/_nanoCLR/nanoFramework.EspMatter/nanoFramework_EspMatter_nanoFramework_EspMatter_Matter.cpp:3:
+# [build] /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/platform/OpenThread/GenericThreadStackManagerImpl_OpenThread.h:28:10: fatal error: openthread/instance.h: No such file or directory
+list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${IDF_PATH_CMAKED}/components/openthread/openthread/include)
+
+# [build] In file included from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/include/platform/internal/BLEManager.h:106,
+# [build]                  from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/include/platform/internal/GenericConnectivityManagerImpl_BLE.h:27,
+# [build]                  from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/platform/ESP32/ConnectivityManagerImpl.h:46,
+# [build]                  from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/include/platform/ConnectivityManager.h:338,
+# [build]                  from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/platform/ESP32/ConfigurationManagerImpl.h:30,
+# [build]                  from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/include/platform/ConfigurationManager.h:233,
+# [build]                  from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/include/platform/CHIPDeviceLayer.h:27,
+# [build]                  from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/app/CASESessionManager.h:28,
+# [build]                  from /sources/esp-idf/components/esp_matter/components/esp_matter/esp_matter_core.h:17,
+# [build]                  from /workspaces/nf-interpreter/targets/ESP32/_nanoCLR/nanoFramework.EspMatter/nanoFramework_EspMatter_nanoFramework_EspMatter_Matter.cpp:3:
+# [build] /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/platform/ESP32/BLEManagerImpl.h:52:10: fatal error: host/ble_hs.h: No such file or directory
+list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${IDF_PATH_CMAKED}/components/bt/host/nimble/nimble/nimble/host/include)
+# [build] In file included from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/platform/ESP32/BLEManagerImpl.h:52,
+# [build]                  from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/include/platform/internal/BLEManager.h:106,
+# [build]                  from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/include/platform/internal/GenericConnectivityManagerImpl_BLE.h:27,
+# [build]                  from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/platform/ESP32/ConnectivityManagerImpl.h:46,
+# [build]                  from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/include/platform/ConnectivityManager.h:338,
+# [build]                  from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/platform/ESP32/ConfigurationManagerImpl.h:30,
+# [build]                  from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/include/platform/ConfigurationManager.h:233,
+# [build]                  from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/include/platform/CHIPDeviceLayer.h:27,
+# [build]                  from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/app/CASESessionManager.h:28,
+# [build]                  from /sources/esp-idf/components/esp_matter/components/esp_matter/esp_matter_core.h:17,
+# [build]                  from /workspaces/nf-interpreter/targets/ESP32/_nanoCLR/nanoFramework.EspMatter/nanoFramework_EspMatter_nanoFramework_EspMatter_Matter.cpp:3:
+# [build] /sources/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs.h:30:10: fatal error: nimble/hci_common.h: No such file or directory
+list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${IDF_PATH_CMAKED}/components/bt/host/nimble/nimble/nimble/include)
+# [build] In file included from /sources/esp-idf/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:30,
+# [build]                  from /sources/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs.h:30,
+# [build]                  from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/platform/ESP32/BLEManagerImpl.h:52,
+# [build]                  from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/include/platform/internal/BLEManager.h:106,
+# [build]                  from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/include/platform/internal/GenericConnectivityManagerImpl_BLE.h:27,
+# [build]                  from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/platform/ESP32/ConnectivityManagerImpl.h:46,
+# [build]                  from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/include/platform/ConnectivityManager.h:338,
+# [build]                  from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/platform/ESP32/ConfigurationManagerImpl.h:30,
+# [build]                  from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/include/platform/ConfigurationManager.h:233,
+# [build]                  from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/include/platform/CHIPDeviceLayer.h:27,
+# [build]                  from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/app/CASESessionManager.h:28,
+# [build]                  from /sources/esp-idf/components/esp_matter/components/esp_matter/esp_matter_core.h:17,
+# [build]                  from /workspaces/nf-interpreter/targets/ESP32/_nanoCLR/nanoFramework.EspMatter/nanoFramework_EspMatter_nanoFramework_EspMatter_Matter.cpp:3:
+# [build] /sources/esp-idf/components/bt/host/nimble/nimble/nimble/include/nimble/ble.h:25:10: fatal error: syscfg/syscfg.h: No such file or directory
+list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${IDF_PATH_CMAKED}/components/bt/host/nimble/nimble/porting/nimble/include)
+# [build] In file included from /sources/esp-idf/components/bt/host/nimble/nimble/nimble/include/nimble/ble.h:25,
+# [build]                  from /sources/esp-idf/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:30,
+# [build]                  from /sources/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs.h:30,
+# [build]                  from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/platform/ESP32/BLEManagerImpl.h:52,
+# [build]                  from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/include/platform/internal/BLEManager.h:106,
+# [build]                  from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/include/platform/internal/GenericConnectivityManagerImpl_BLE.h:27,
+# [build]                  from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/platform/ESP32/ConnectivityManagerImpl.h:46,
+# [build]                  from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/include/platform/ConnectivityManager.h:338,
+# [build]                  from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/platform/ESP32/ConfigurationManagerImpl.h:30,
+# [build]                  from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/include/platform/ConfigurationManager.h:233,
+# [build]                  from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/include/platform/CHIPDeviceLayer.h:27,
+# [build]                  from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/app/CASESessionManager.h:28,
+# [build]                  from /sources/esp-idf/components/esp_matter/components/esp_matter/esp_matter_core.h:17,
+# [build]                  from /workspaces/nf-interpreter/targets/ESP32/_nanoCLR/nanoFramework.EspMatter/nanoFramework_EspMatter_nanoFramework_EspMatter_Matter.cpp:3:
+# [build] /sources/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/syscfg/syscfg.h:9:10: fatal error: esp_nimble_cfg.h: No such file or directory
+list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${IDF_PATH_CMAKED}/components/bt/host/nimble/port/include)
+# [build] In file included from /sources/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os.h:34,
+# [build]                  from /sources/esp-idf/components/bt/host/nimble/nimble/nimble/include/nimble/ble.h:26,
+# [build]                  from /sources/esp-idf/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:30,
+# [build]                  from /sources/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs.h:30,
+# [build]                  from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/platform/ESP32/BLEManagerImpl.h:52,
+# [build]                  from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/include/platform/internal/BLEManager.h:106,
+# [build]                  from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/include/platform/internal/GenericConnectivityManagerImpl_BLE.h:27,
+# [build]                  from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/platform/ESP32/ConnectivityManagerImpl.h:46,
+# [build]                  from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/include/platform/ConnectivityManager.h:338,
+# [build]                  from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/platform/ESP32/ConfigurationManagerImpl.h:30,
+# [build]                  from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/include/platform/ConfigurationManager.h:233,
+# [build]                  from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/include/platform/CHIPDeviceLayer.h:27,
+# [build]                  from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/app/CASESessionManager.h:28,
+# [build]                  from /sources/esp-idf/components/esp_matter/components/esp_matter/esp_matter_core.h:17,
+# [build]                  from /workspaces/nf-interpreter/targets/ESP32/_nanoCLR/nanoFramework.EspMatter/nanoFramework_EspMatter_nanoFramework_EspMatter_Matter.cpp:3:
+# [build] /sources/esp-idf/components/bt/host/nimble/nimble/nimble/include/nimble/nimble_npl.h:53:10: fatal error: nimble/nimble_npl_os.h: No such file or directory
+list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${IDF_PATH_CMAKED}/components/bt/host/nimble/nimble/porting/npl/freertos/include)
+# [build] In file included from /sources/esp-idf/components/bt/host/nimble/nimble/nimble/include/nimble/ble.h:26,
+# [build]                  from /sources/esp-idf/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:30,
+# [build]                  from /sources/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs.h:30,
+# [build]                  from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/platform/ESP32/BLEManagerImpl.h:52,
+# [build]                  from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/include/platform/internal/BLEManager.h:106,
+# [build]                  from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/include/platform/internal/GenericConnectivityManagerImpl_BLE.h:27,
+# [build]                  from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/platform/ESP32/ConnectivityManagerImpl.h:46,
+# [build]                  from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/include/platform/ConnectivityManager.h:338,
+# [build]                  from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/platform/ESP32/ConfigurationManagerImpl.h:30,
+# [build]                  from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/include/platform/ConfigurationManager.h:233,
+# [build]                  from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/include/platform/CHIPDeviceLayer.h:27,
+# [build]                  from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/app/CASESessionManager.h:28,
+# [build]                  from /sources/esp-idf/components/esp_matter/components/esp_matter/esp_matter_core.h:17,
+# [build]                  from /workspaces/nf-interpreter/targets/ESP32/_nanoCLR/nanoFramework.EspMatter/nanoFramework_EspMatter_nanoFramework_EspMatter_Matter.cpp:3:
+# [build] /sources/esp-idf/components/bt/host/nimble/nimble/porting/nimble/include/os/os.h:53:10: fatal error: os/os_mempool.h: No such file or directory
+list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${IDF_PATH_CMAKED}/components/bt/porting/include)
+# [build] In file included from /sources/esp-idf/components/bt/host/nimble/nimble/nimble/host/include/host/ble_hs.h:30,
+# [build]                  from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/platform/ESP32/BLEManagerImpl.h:52,
+# [build]                  from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/include/platform/internal/BLEManager.h:106,
+# [build]                  from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/include/platform/internal/GenericConnectivityManagerImpl_BLE.h:27,
+# [build]                  from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/platform/ESP32/ConnectivityManagerImpl.h:46,
+# [build]                  from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/include/platform/ConnectivityManager.h:338,
+# [build]                  from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/platform/ESP32/ConfigurationManagerImpl.h:30,
+# [build]                  from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/include/platform/ConfigurationManager.h:233,
+# [build]                  from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/include/platform/CHIPDeviceLayer.h:27,
+# [build]                  from /sources/esp-idf/components/esp_matter/connectedhomeip/connectedhomeip/src/app/CASESessionManager.h:28,
+# [build]                  from /sources/esp-idf/components/esp_matter/components/esp_matter/esp_matter_core.h:17,
+# [build]                  from /workspaces/nf-interpreter/targets/ESP32/_nanoCLR/nanoFramework.EspMatter/nanoFramework_EspMatter_nanoFramework_EspMatter_Matter.cpp:3:
+# [build] /sources/esp-idf/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:31:10: fatal error: nimble/transport.h: No such file or directory
+list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${IDF_PATH_CMAKED}/components/bt/host/nimble/nimble/nimble/transport/include)
+
+
+
 # source files
 set(nanoFramework.EspMatter_SRCS
     nanoFramework_EspMatter.cpp
