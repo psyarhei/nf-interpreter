@@ -176,6 +176,39 @@ list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${IDF_PATH_CMAKED}/components/b
 # [build] /sources/esp-idf/components/bt/host/nimble/nimble/nimble/include/nimble/hci_common.h:31:10: fatal error: nimble/transport.h: No such file or directory
 list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${IDF_PATH_CMAKED}/components/bt/host/nimble/nimble/nimble/transport/include)
 
+# [build] In file included from /workspaces/nf-interpreter/targets/ESP32/_nanoCLR/nanoFramework.EspMatter/nanoFramework_EspMatter_nanoFramework_EspMatter_Matter.cpp:4:
+# [build] /sources/esp-idf/components/esp_matter/components/esp_matter/data_model/generated/esp_matter_data_model_utils.h:15:10: fatal error: esp_matter_data_model.h: No such file or directory
+#list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${IDF_PATH_CMAKED}/components/esp_matter/components/esp_matter/data_model)
+# [build] In file included from /sources/esp-idf/components/esp_matter/components/esp_matter/data_model/esp_matter_data_model.h:17,
+# [build]                  from /sources/esp-idf/components/esp_matter/components/esp_matter/data_model/generated/esp_matter_data_model_utils.h:15,
+# [build]                  from /workspaces/nf-interpreter/targets/ESP32/_nanoCLR/nanoFramework.EspMatter/nanoFramework_EspMatter_nanoFramework_EspMatter_Matter.cpp:4:
+# [build] /sources/esp-idf/components/esp_matter/components/esp_matter/data_model/esp_matter_attribute_utils.h:17:10: fatal error: support/CodeUtils.h: No such file or directory
+#list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${IDF_PATH_CMAKED}/components/esp_matter/connectedhomeip/connectedhomeip/src/lib)
+# [build] In file included from /workspaces/nf-interpreter/targets/ESP32/_nanoCLR/nanoFramework.EspMatter/nanoFramework_EspMatter_nanoFramework_EspMatter_Matter.cpp:4:
+# [build] /sources/esp-idf/components/esp_matter/components/esp_matter/data_model/generated/esp_matter_data_model_utils.h:18:10: fatal error: root_node_device.h: No such file or directory
+#list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${IDF_PATH_CMAKED}/components/esp_matter/components/esp_matter/data_model/generated/device_types/root_node_device)
+
+# set(CLUSTERS_DIR ${IDF_PATH_CMAKED}/components/esp_matter/components/esp_matter/data_model/generated/clusters)
+# file(GLOB CLUSTER_ITEMS RELATIVE "${CLUSTERS_DIR}" "${CLUSTERS_DIR}/*")
+# foreach(item ${CLUSTER_ITEMS})
+#     set(FULL_PATH "${CLUSTERS_DIR}/${item}")
+#     if(IS_DIRECTORY "${FULL_PATH}")
+#         list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${FULL_PATH})
+#     endif()
+# endforeach()
+
+# set(DEVICE_TYPES_DIR ${IDF_PATH_CMAKED}/components/esp_matter/components/esp_matter/data_model/generated/device_types)
+# file(GLOB DEVICE_TYPES_ITEMS RELATIVE "${DEVICE_TYPES_DIR}" "${DEVICE_TYPES_DIR}/*")
+# foreach(item ${DEVICE_TYPES_ITEMS})
+#     set(FULL_PATH "${DEVICE_TYPES_DIR}/${item}")
+#     if(IS_DIRECTORY "${FULL_PATH}")
+#         list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${FULL_PATH})
+#     endif()
+# endforeach()
+
+
+#list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${IDF_PATH_CMAKED}/components/openthread/include)
+
 
 
 # source files
