@@ -5,6 +5,18 @@
 #include <nanoCLR_Runtime.h>
 #include <nanoPackStruct.h>
 
+struct Library_nanoFramework_EspMatter_nanoFramework_EspMatter_Endpoints_Endpoint
+{
+    static const int FIELD__NativeHandle = 1;
+    //--//
+};
+
+struct Library_nanoFramework_EspMatter_nanoFramework_EspMatter_Endpoints_OnOffLightSwitch
+{
+    NANOCLR_NATIVE_DECLARE(EspMatter_Endpoint_OnOffLightSwitch_Create___STATIC__U4__U4);
+    //--//
+};
+
 struct Library_nanoFramework_EspMatter_nanoFramework_EspMatter_Matter
 {
     NANOCLR_NATIVE_DECLARE(EspMatter_IsStarted___STATIC__BOOLEAN);

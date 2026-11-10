@@ -1,8 +1,6 @@
 // #include <queue>
 
 #include <esp_matter_core.h>
-// #include <data_model/generated/esp_matter_data_model_utils.h>
-// #include <data_model/generated/device_types/on_off_light_switch_device/on_off_light_switch_device.h>
 
 // #include <platform/ESP32/OpenthreadLauncher.h>
 
@@ -37,21 +35,6 @@ void Matter::EspMatter_Start(HRESULT &hr)
     // otConfig.port_config.netif_queue_size = 10;
     // otConfig.port_config.task_queue_size = 10;
     // set_openthread_platform_config(&otConfig);
-
-    // static auto attributeCallback = [](esp_matter::attribute::callback_type_t type, uint16_t endpoint_id, uint32_t cluster_id, uint32_t attribute_id, esp_matter_attr_val_t *val, void *priv_data) -> esp_err_t {
-    //     return ESP_OK;
-    // };
-
-    // static auto identifyCallback = [](esp_matter::identification::callback_type_t type, uint16_t endpoint_id, uint8_t effect_id, uint8_t effect_variant, void *priv_data) -> esp_err_t {
-        
-    //     return ESP_OK;
-    // };
-
-    // esp_matter::node::config_t node_config;
-    // auto node = esp_matter::node::create(&node_config, attributeCallback, identifyCallback);
-
-    // esp_matter::endpoint::on_off_light_switch::config_t config1 = {};
-    // esp_matter::endpoint::on_off_light_switch::create(node, &config1, 0, nullptr);
 
     // chip::Logging::SetLogRedirectCallback(ClrDebugLogRedirect);
 

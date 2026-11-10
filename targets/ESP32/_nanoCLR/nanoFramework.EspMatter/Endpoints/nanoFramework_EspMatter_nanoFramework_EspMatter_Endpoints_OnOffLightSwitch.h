@@ -1,0 +1,15 @@
+#ifndef NANOFRAMEWORK_ESPMATTER_NANOFRAMEWORK_ESPMATTER_NANOFRAMEWORK_ESPMATTER_ENDPOINTS_ONOFFLIGHTSWITCH_H
+#define NANOFRAMEWORK_ESPMATTER_NANOFRAMEWORK_ESPMATTER_NANOFRAMEWORK_ESPMATTER_ENDPOINTS_ONOFFLIGHTSWITCH_H
+
+namespace nanoFramework_EspMatter
+{
+    namespace nanoFramework_EspMatter
+    {
+        struct OnOffLightSwitch
+        {
+            static unsigned int EspMatter_Endpoint_OnOffLightSwitch_Create(unsigned int param0, HRESULT &hr);
+        };
+    }
+}
+
+#endif // NANOFRAMEWORK_ESPMATTER_NANOFRAMEWORK_ESPMATTER_NANOFRAMEWORK_ESPMATTER_ENDPOINTS_ONOFFLIGHTSWITCH_H

@@ -231,12 +231,12 @@ list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${IDF_PATH_CMAKED}/components/e
 # [build]                  from /workspaces/nf-interpreter/targets/ESP32/_nanoCLR/nanoFramework.EspMatter/nanoFramework_EspMatter_nanoFramework_EspMatter_Matter.cpp:4:
 # [build] /sources/esp-idf/components/esp_matter/components/esp_matter/data_model/generated/device_types/root_node_device/root_node_device.h:34:10: fatal error: thread_network_diagnostics.h: No such file or directory
 list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${IDF_PATH_CMAKED}/components/esp_matter/components/esp_matter/data_model/generated/clusters/thread_network_diagnostics)
-# # [build] In file included from /workspaces/nf-interpreter/targets/ESP32/_nanoCLR/nanoFramework.EspMatter/nanoFramework_EspMatter_nanoFramework_EspMatter_Matter.cpp:5:
-# # [build] /sources/esp-idf/components/esp_matter/components/esp_matter/data_model/generated/device_types/on_off_light_switch_device/on_off_light_switch_device.h:21:10: fatal error: identify.h: No such file or directory
-# list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${IDF_PATH_CMAKED}/components/esp_matter/components/esp_matter/data_model/generated/clusters/identify)
-# # [build] In file included from /workspaces/nf-interpreter/targets/ESP32/_nanoCLR/nanoFramework.EspMatter/nanoFramework_EspMatter_nanoFramework_EspMatter_Matter.cpp:5:
-# # [build] /sources/esp-idf/components/esp_matter/components/esp_matter/data_model/generated/device_types/on_off_light_switch_device/on_off_light_switch_device.h:22:10: fatal error: on_off.h: No such file or directory
-# list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${IDF_PATH_CMAKED}/components/esp_matter/components/esp_matter/data_model/generated/clusters/on_off)
+# [build] In file included from /workspaces/nf-interpreter/targets/ESP32/_nanoCLR/nanoFramework.EspMatter/nanoFramework_EspMatter_nanoFramework_EspMatter_Matter.cpp:5:
+# [build] /sources/esp-idf/components/esp_matter/components/esp_matter/data_model/generated/device_types/on_off_light_switch_device/on_off_light_switch_device.h:21:10: fatal error: identify.h: No such file or directory
+list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${IDF_PATH_CMAKED}/components/esp_matter/components/esp_matter/data_model/generated/clusters/identify)
+# [build] In file included from /workspaces/nf-interpreter/targets/ESP32/_nanoCLR/nanoFramework.EspMatter/nanoFramework_EspMatter_nanoFramework_EspMatter_Matter.cpp:5:
+# [build] /sources/esp-idf/components/esp_matter/components/esp_matter/data_model/generated/device_types/on_off_light_switch_device/on_off_light_switch_device.h:22:10: fatal error: on_off.h: No such file or directory
+list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${IDF_PATH_CMAKED}/components/esp_matter/components/esp_matter/data_model/generated/clusters/on_off)
 
 
 
@@ -267,6 +267,9 @@ list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${IDF_PATH_CMAKED}/components/e
 set(nanoFramework.EspMatter_SRCS
     nanoFramework_EspMatter.cpp
 
+    nanoFramework_EspMatter_nanoFramework_EspMatter_Endpoints_OnOffLightSwitch_mshl.cpp
+    nanoFramework_EspMatter_nanoFramework_EspMatter_Endpoints_OnOffLightSwitch.cpp
+
     nanoFramework_EspMatter_nanoFramework_EspMatter_Matter_mshl.cpp
     nanoFramework_EspMatter_nanoFramework_EspMatter_Matter.cpp
 
@@ -281,6 +284,7 @@ foreach(SRC_FILE ${nanoFramework.EspMatter_SRCS})
     find_file(nanoFramework.EspMatter_SRC_FILE ${SRC_FILE}
         PATHS
             ${BASE_PATH_FOR_THIS_MODULE}
+            ${BASE_PATH_FOR_THIS_MODULE}/Endpoints
 
         CMAKE_FIND_ROOT_PATH_BOTH
     )
