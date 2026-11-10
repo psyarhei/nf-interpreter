@@ -4,7 +4,6 @@
 // #include <data_model/generated/esp_matter_data_model_utils.h>
 // #include <data_model/generated/device_types/on_off_light_switch_device/on_off_light_switch_device.h>
 
-// // #include <data_model/generated/esp_matter_data_model_utils.h>
 // #include <platform/ESP32/OpenthreadLauncher.h>
 
 #include "nanoFramework_EspMatter.h"

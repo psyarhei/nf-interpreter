@@ -178,15 +178,67 @@ list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${IDF_PATH_CMAKED}/components/b
 
 # [build] In file included from /workspaces/nf-interpreter/targets/ESP32/_nanoCLR/nanoFramework.EspMatter/nanoFramework_EspMatter_nanoFramework_EspMatter_Matter.cpp:4:
 # [build] /sources/esp-idf/components/esp_matter/components/esp_matter/data_model/generated/esp_matter_data_model_utils.h:15:10: fatal error: esp_matter_data_model.h: No such file or directory
-#list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${IDF_PATH_CMAKED}/components/esp_matter/components/esp_matter/data_model)
+list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${IDF_PATH_CMAKED}/components/esp_matter/components/esp_matter/data_model)
 # [build] In file included from /sources/esp-idf/components/esp_matter/components/esp_matter/data_model/esp_matter_data_model.h:17,
 # [build]                  from /sources/esp-idf/components/esp_matter/components/esp_matter/data_model/generated/esp_matter_data_model_utils.h:15,
 # [build]                  from /workspaces/nf-interpreter/targets/ESP32/_nanoCLR/nanoFramework.EspMatter/nanoFramework_EspMatter_nanoFramework_EspMatter_Matter.cpp:4:
 # [build] /sources/esp-idf/components/esp_matter/components/esp_matter/data_model/esp_matter_attribute_utils.h:17:10: fatal error: support/CodeUtils.h: No such file or directory
-#list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${IDF_PATH_CMAKED}/components/esp_matter/connectedhomeip/connectedhomeip/src/lib)
+list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${IDF_PATH_CMAKED}/components/esp_matter/connectedhomeip/connectedhomeip/src/lib)
 # [build] In file included from /workspaces/nf-interpreter/targets/ESP32/_nanoCLR/nanoFramework.EspMatter/nanoFramework_EspMatter_nanoFramework_EspMatter_Matter.cpp:4:
 # [build] /sources/esp-idf/components/esp_matter/components/esp_matter/data_model/generated/esp_matter_data_model_utils.h:18:10: fatal error: root_node_device.h: No such file or directory
-#list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${IDF_PATH_CMAKED}/components/esp_matter/components/esp_matter/data_model/generated/device_types/root_node_device)
+list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${IDF_PATH_CMAKED}/components/esp_matter/components/esp_matter/data_model/generated/device_types/root_node_device)
+# [build] In file included from /sources/esp-idf/components/esp_matter/components/esp_matter/data_model/generated/esp_matter_data_model_utils.h:18,
+# [build]                  from /workspaces/nf-interpreter/targets/ESP32/_nanoCLR/nanoFramework.EspMatter/nanoFramework_EspMatter_nanoFramework_EspMatter_Matter.cpp:4:
+# [build] /sources/esp-idf/components/esp_matter/components/esp_matter/data_model/generated/device_types/root_node_device/root_node_device.h:20:10: fatal error: descriptor.h: No such file or directory
+list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${IDF_PATH_CMAKED}/components/esp_matter/components/esp_matter/data_model/generated/clusters/descriptor)
+# [build] In file included from /sources/esp-idf/components/esp_matter/components/esp_matter/data_model/generated/esp_matter_data_model_utils.h:18,
+# [build]                  from /workspaces/nf-interpreter/targets/ESP32/_nanoCLR/nanoFramework.EspMatter/nanoFramework_EspMatter_nanoFramework_EspMatter_Matter.cpp:4:
+# [build] /sources/esp-idf/components/esp_matter/components/esp_matter/data_model/generated/device_types/root_node_device/root_node_device.h:21:10: fatal error: access_control.h: No such file or directory
+list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${IDF_PATH_CMAKED}/components/esp_matter/components/esp_matter/data_model/generated/clusters/access_control)
+# [build] In file included from /sources/esp-idf/components/esp_matter/components/esp_matter/data_model/generated/esp_matter_data_model_utils.h:18,
+# [build]                  from /workspaces/nf-interpreter/targets/ESP32/_nanoCLR/nanoFramework.EspMatter/nanoFramework_EspMatter_nanoFramework_EspMatter_Node.cpp:1:
+# [build] /sources/esp-idf/components/esp_matter/components/esp_matter/data_model/generated/device_types/root_node_device/root_node_device.h:22:10: fatal error: basic_information.h: No such file or directory
+list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${IDF_PATH_CMAKED}/components/esp_matter/components/esp_matter/data_model/generated/clusters/basic_information)
+# [build] In file included from /sources/esp-idf/components/esp_matter/components/esp_matter/data_model/generated/esp_matter_data_model_utils.h:18,
+# [build]                  from /workspaces/nf-interpreter/targets/ESP32/_nanoCLR/nanoFramework.EspMatter/nanoFramework_EspMatter_nanoFramework_EspMatter_Node.cpp:1:
+# [build] /sources/esp-idf/components/esp_matter/components/esp_matter/data_model/generated/device_types/root_node_device/root_node_device.h:23:10: fatal error: general_commissioning.h: No such file or directory
+list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${IDF_PATH_CMAKED}/components/esp_matter/components/esp_matter/data_model/generated/clusters/general_commissioning)
+# [build] In file included from /sources/esp-idf/components/esp_matter/components/esp_matter/data_model/generated/esp_matter_data_model_utils.h:18,
+# [build]                  from /workspaces/nf-interpreter/targets/ESP32/_nanoCLR/nanoFramework.EspMatter/nanoFramework_EspMatter_nanoFramework_EspMatter_Node.cpp:1:
+# [build] /sources/esp-idf/components/esp_matter/components/esp_matter/data_model/generated/device_types/root_node_device/root_node_device.h:24:10: fatal error: network_commissioning.h: No such file or directory
+list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${IDF_PATH_CMAKED}/components/esp_matter/components/esp_matter/data_model/generated/clusters/network_commissioning)
+# [build] In file included from /sources/esp-idf/components/esp_matter/components/esp_matter/data_model/generated/esp_matter_data_model_utils.h:18,
+# [build]                  from /workspaces/nf-interpreter/targets/ESP32/_nanoCLR/nanoFramework.EspMatter/nanoFramework_EspMatter_nanoFramework_EspMatter_Node.cpp:1:
+# [build] /sources/esp-idf/components/esp_matter/components/esp_matter/data_model/generated/device_types/root_node_device/root_node_device.h:25:10: fatal error: general_diagnostics.h: No such file or directory
+list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${IDF_PATH_CMAKED}/components/esp_matter/components/esp_matter/data_model/generated/clusters/general_diagnostics)
+# [build] In file included from /sources/esp-idf/components/esp_matter/components/esp_matter/data_model/generated/esp_matter_data_model_utils.h:18,
+# [build]                  from /workspaces/nf-interpreter/targets/ESP32/_nanoCLR/nanoFramework.EspMatter/nanoFramework_EspMatter_nanoFramework_EspMatter_Node.cpp:1:
+# [build] /sources/esp-idf/components/esp_matter/components/esp_matter/data_model/generated/device_types/root_node_device/root_node_device.h:26:10: fatal error: administrator_commissioning.h: No such file or directory
+list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${IDF_PATH_CMAKED}/components/esp_matter/components/esp_matter/data_model/generated/clusters/administrator_commissioning)
+# [build] In file included from /sources/esp-idf/components/esp_matter/components/esp_matter/data_model/generated/esp_matter_data_model_utils.h:18,
+# [build]                  from /workspaces/nf-interpreter/targets/ESP32/_nanoCLR/nanoFramework.EspMatter/nanoFramework_EspMatter_nanoFramework_EspMatter_Node.cpp:1:
+# [build] /sources/esp-idf/components/esp_matter/components/esp_matter/data_model/generated/device_types/root_node_device/root_node_device.h:27:10: fatal error: operational_credentials.h: No such file or directory
+list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${IDF_PATH_CMAKED}/components/esp_matter/components/esp_matter/data_model/generated/clusters/operational_credentials)
+# [build] In file included from /sources/esp-idf/components/esp_matter/components/esp_matter/data_model/generated/esp_matter_data_model_utils.h:18,
+# [build]                  from /workspaces/nf-interpreter/targets/ESP32/_nanoCLR/nanoFramework.EspMatter/nanoFramework_EspMatter_nanoFramework_EspMatter_Matter.cpp:4:
+# [build] /sources/esp-idf/components/esp_matter/components/esp_matter/data_model/generated/device_types/root_node_device/root_node_device.h:28:10: fatal error: group_key_management.h: No such file or directory
+list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${IDF_PATH_CMAKED}/components/esp_matter/components/esp_matter/data_model/generated/clusters/group_key_management)
+# [build] In file included from /sources/esp-idf/components/esp_matter/components/esp_matter/data_model/generated/esp_matter_data_model_utils.h:18,
+# [build]                  from /workspaces/nf-interpreter/targets/ESP32/_nanoCLR/nanoFramework.EspMatter/nanoFramework_EspMatter_nanoFramework_EspMatter_Matter.cpp:4:
+# [build] /sources/esp-idf/components/esp_matter/components/esp_matter/data_model/generated/device_types/root_node_device/root_node_device.h:29:10: fatal error: icd_management.h: No such file or directory
+list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${IDF_PATH_CMAKED}/components/esp_matter/components/esp_matter/data_model/generated/clusters/icd_management)
+# [build] In file included from /sources/esp-idf/components/esp_matter/components/esp_matter/data_model/generated/esp_matter_data_model_utils.h:18,
+# [build]                  from /workspaces/nf-interpreter/targets/ESP32/_nanoCLR/nanoFramework.EspMatter/nanoFramework_EspMatter_nanoFramework_EspMatter_Matter.cpp:4:
+# [build] /sources/esp-idf/components/esp_matter/components/esp_matter/data_model/generated/device_types/root_node_device/root_node_device.h:34:10: fatal error: thread_network_diagnostics.h: No such file or directory
+list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${IDF_PATH_CMAKED}/components/esp_matter/components/esp_matter/data_model/generated/clusters/thread_network_diagnostics)
+# # [build] In file included from /workspaces/nf-interpreter/targets/ESP32/_nanoCLR/nanoFramework.EspMatter/nanoFramework_EspMatter_nanoFramework_EspMatter_Matter.cpp:5:
+# # [build] /sources/esp-idf/components/esp_matter/components/esp_matter/data_model/generated/device_types/on_off_light_switch_device/on_off_light_switch_device.h:21:10: fatal error: identify.h: No such file or directory
+# list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${IDF_PATH_CMAKED}/components/esp_matter/components/esp_matter/data_model/generated/clusters/identify)
+# # [build] In file included from /workspaces/nf-interpreter/targets/ESP32/_nanoCLR/nanoFramework.EspMatter/nanoFramework_EspMatter_nanoFramework_EspMatter_Matter.cpp:5:
+# # [build] /sources/esp-idf/components/esp_matter/components/esp_matter/data_model/generated/device_types/on_off_light_switch_device/on_off_light_switch_device.h:22:10: fatal error: on_off.h: No such file or directory
+# list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${IDF_PATH_CMAKED}/components/esp_matter/components/esp_matter/data_model/generated/clusters/on_off)
+
+
 
 # set(CLUSTERS_DIR ${IDF_PATH_CMAKED}/components/esp_matter/components/esp_matter/data_model/generated/clusters)
 # file(GLOB CLUSTER_ITEMS RELATIVE "${CLUSTERS_DIR}" "${CLUSTERS_DIR}/*")
@@ -207,15 +259,19 @@ list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${IDF_PATH_CMAKED}/components/b
 # endforeach()
 
 
-#list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${IDF_PATH_CMAKED}/components/openthread/include)
+# list(APPEND nanoFramework.EspMatter_INCLUDE_DIRS ${IDF_PATH_CMAKED}/components/openthread/include)
 
 
 
 # source files
 set(nanoFramework.EspMatter_SRCS
     nanoFramework_EspMatter.cpp
+
     nanoFramework_EspMatter_nanoFramework_EspMatter_Matter_mshl.cpp
     nanoFramework_EspMatter_nanoFramework_EspMatter_Matter.cpp
+
+    nanoFramework_EspMatter_nanoFramework_EspMatter_Node_mshl.cpp
+    nanoFramework_EspMatter_nanoFramework_EspMatter_Node.cpp
 )
 
 foreach(SRC_FILE ${nanoFramework.EspMatter_SRCS})

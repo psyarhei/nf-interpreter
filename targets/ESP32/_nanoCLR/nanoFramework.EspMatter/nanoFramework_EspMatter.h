@@ -12,6 +12,13 @@ struct Library_nanoFramework_EspMatter_nanoFramework_EspMatter_Matter
     //--//
 };
 
+struct Library_nanoFramework_EspMatter_nanoFramework_EspMatter_Node
+{
+    static const int FIELD__NativeHandle = 1;
+    NANOCLR_NATIVE_DECLARE(EspMatter_Node_Create___STATIC__U4);
+    //--//
+};
+
 extern const CLR_RT_NativeAssemblyData g_CLR_AssemblyNative_nanoFramework_EspMatter;
 
 #endif // NANOFRAMEWORK_ESPMATTER_H
